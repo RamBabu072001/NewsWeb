@@ -5,11 +5,11 @@ const cors = require("cors");
 const app = express();
 
 // CORS configuration
-// app.use(cors({
-//   origin: '*', // Be cautious with this in production
-//   methods: ['GET', 'POST', 'OPTIONS'],
-//   allowedHeaders: ['Content-Type', 'Authorization']
-// }));
+app.use(cors({
+  origin: '*', // Be cautious with this in production
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
